@@ -1,0 +1,10 @@
+"name":"Prince water Engineering"
+"short_name":"Prince Water"
+"start-url":"standalone",
+"background-color":"#0d9488",
+"description":"prince water engineering company",
+"icons":[
+  {
+    "src":"https://cdn.jsdelivr.net/ghtwitter/twemoji@14.0.2/assets72*72/1f4a7.pmg",
+    "sizes":"192*192"'
+  "type";"images/png"}]
