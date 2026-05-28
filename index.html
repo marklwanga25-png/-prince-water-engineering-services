@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@prince water engineering services | Mengo</title>
+    <style>
+        /* Modern Reset and Variables */
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        :root { --primary: #0077b6; --secondary: #00b4d8; --dark: #1d3557; --light: #f8f9fa; }
+        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+        
+        /* Navigation */
+        nav { background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 1.4rem; font-weight: bold; color: var(--primary); }
+        .nav-links a { text-decoration: none; color: var(--dark); margin-left: 20px; font-weight: 600; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+
+        /* Hero Section */
+        .hero { background: linear-gradient(135deg, rgba(29,53,87,0.9), rgba(0,119,182,0.8)), url('https://unsplash.com') no-repeat center center/cover; padding: 100px 5%; text-align: center; color: white; }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 15px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
+
+        /* Buttons */
+        .btn { display: inline-block; padding: 12px 30px; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; margin: 5px; }
+        .btn-whatsapp { background-color: #25D366; }
+        .btn-whatsapp:hover { background-color: #128C7E; transform: translateY(-2px); }
+        .btn-email { background-color: var(--secondary); }
+        .btn-email:hover { background-color: var(--primary); transform: translateY(-2px); }
+
+        /* Services Section */
+        .services { padding: 60px 5%; text-align: center; }
+        .services h2 { font-size: 2.2rem; margin-bottom: 40px; position: relative; }
+        .services h2::after { content: ''; display: block; width: 60px; height: 3px; background: var(--primary); margin: 10px auto 0; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .card img { width: 100%; height: 220px; object-fit: cover; }
+        .card-content { padding: 20px; text-align: left; }
+        .card-content h3 { margin-bottom: 10px; color: var(--primary); }
+
+        /* Contact & Info Section */
+        .info-panel { background: white; padding: 40px 5%; margin: 40px 5%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; }
+        .info-panel h2 { margin-bottom: 20px; }
+        .info-details { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-bottom: 30px; font-size: 1.1rem; }
+        
+        /* Footer */
+        footer { background: var(--dark); color: white; text-align: center; padding: 20px; font-size: 0.9rem; }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <nav>
+        <div class="logo">@prince water engineering services</div>
+        <div class="nav-links">
+            <a href="#services">Our Services</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Main Hero Banner -->
+    <header class="hero">
+        <h1>Professional Engineering & Water Solutions</h1>
+        <p>Reliable plumbing, irrigation, and water infrastructure engineering based in Mengo.</p>
+        <a href="https://wa.me." class="btn btn-whatsapp" target="_blank">Chat on WhatsApp</a>
+        <a href="mailto:enochsuuna@://gmail.com" class="btn btn-email">Email Us Now</a>
+    </header>
+
+    <!-- Services Grid Grid -->
+    <section class="services" id="services">
+        <h2>Expert Services We Provide</h2>
+        <div class="grid">
+            
+            <!-- Service 1 -->
+            <div class="card">
+                <img src="inst.jpg" alt="Plumbing Installation">
+                <div class="card-content">
+                    <h3>Plumbing Installation</h3>
+                    <p>High-quality residential and commercial plumbing setups, pipeline tracking, repairs, and fixture installations built to last.</p>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="card">
+                <img src="irr.jpg" alt="Irrigation Systems">
+                <div class="card-content">
+                    <h3>Irrigation Systems</h3>
+                    <p>Custom commercial and agricultural drip and sprinkler layout systems designed to optimize water usage and maximize crop yields.</p>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="card">
+                <img src="water.jpg" alt="Water Supply Systems">
+                <div class="card-content">
+                    <h3>Water Supply Systems</h3>
+                    <p>Clean water distribution systems, pump installations, storage tank integration, and pressure management infrastructure.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Business Contact Info Section -->
+    <section class="info-panel" id="contact">
+        <h2>Get in Touch With Us</h2>
+        <div class="info-details">
+            <div>📍 <strong>Location:</strong> Mengo, Stanet, Kampala, Uganda</div>
+            <div>📞 <strong>WhatsApp:</strong> +256707056887</div>
+            <div>✉️ <strong>Email:</strong> enochsuuna@gmail.com</div>
+        </div>
+        <a href="https://wa.me." class="btn btn-whatsapp" target="_blank">Book Appointment Via WhatsApp</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 @prince water engineering services. All Rights Reserved. Located at Mengo Stanet.</p>
+    </footer>
+
+</body>
+</html>
