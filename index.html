@@ -1,125 +1,379 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@prince water engineering services | Mengo</title>
-    <style>
-        /* Modern Reset and Variables */
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        :root { --primary: #0077b6; --secondary: #00b4d8; --dark: #1d3557; --light: #f8f9fa; }
-        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
-        
-        /* Navigation */
-        nav { background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
-        .logo { font-size: 1.4rem; font-weight: bold; color: var(--primary); }
-        .nav-links a { text-decoration: none; color: var(--dark); margin-left: 20px; font-weight: 600; transition: 0.3s; }
-        .nav-links a:hover { color: var(--primary); }
+/* =========================================================
+   MOBILE RESPONSIVE DESIGN
+   ========================================================= */
 
-        /* Hero Section */
-        .hero { background: linear-gradient(135deg, rgba(29,53,87,0.9), rgba(0,119,182,0.8)), url('https://unsplash.com') no-repeat center center/cover; padding: 100px 5%; text-align: center; color: white; }
-        .hero h1 { font-size: 2.8rem; margin-bottom: 15px; }
-        .hero p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
+/* Prevent horizontal scrolling */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
-        /* Buttons */
-        .btn { display: inline-block; padding: 12px 30px; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; margin: 5px; }
-        .btn-whatsapp { background-color: #25D366; }
-        .btn-whatsapp:hover { background-color: #128C7E; transform: translateY(-2px); }
-        .btn-email { background-color: var(--secondary); }
-        .btn-email:hover { background-color: var(--primary); transform: translateY(-2px); }
+/* Tablet */
+@media (max-width: 900px) {
 
-        /* Services Section */
-        .services { padding: 60px 5%; text-align: center; }
-        .services h2 { font-size: 2.2rem; margin-bottom: 40px; position: relative; }
-        .services h2::after { content: ''; display: block; width: 60px; height: 3px; background: var(--primary); margin: 10px auto 0; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); }
-        .card img { width: 100%; height: 220px; object-fit: cover; }
-        .card-content { padding: 20px; text-align: left; }
-        .card-content h3 { margin-bottom: 10px; color: var(--primary); }
+    header {
+        flex-wrap: wrap;
+        padding: 12px 4%;
+        gap: 15px;
+    }
 
-        /* Contact & Info Section */
-        .info-panel { background: white; padding: 40px 5%; margin: 40px 5%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; }
-        .info-panel h2 { margin-bottom: 20px; }
-        .info-details { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-bottom: 30px; font-size: 1.1rem; }
-        
-        /* Footer */
-        footer { background: var(--dark); color: white; text-align: center; padding: 20px; font-size: 0.9rem; }
+    nav {
+        width: 100%;
+        order: 3;
+    }
 
-        /* Mobile Optimization */
-        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .nav-links { display: none; } }
-    </style>
-</head>
-<body>
+    nav ul {
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
 
-    <!-- Header Navigation -->
-    <nav>
-        <div class="logo">@prince water engineering services</div>
-        <div class="nav-links">
-            <a href="#services">Our Services</a>
-            <a href="#contact">Contact Us</a>
-        </div>
-    </nav>
+    .whatsapp-btn {
+        padding: 9px 15px;
+        font-size: 0.85rem;
+    }
 
-    <!-- Main Hero Banner -->
-    <header class="hero">
-        <h1>Professional Engineering & Water Solutions</h1>
-        <p>Reliable plumbing, irrigation, and water infrastructure engineering based in Mengo.</p>
-        <a href="https://wa.me/256707056887" class="btn btn-whatsapp" target="_blank">Chat on WhatsApp</a>
-        <a href="mailto:enochsuuna@://gmail.com" class="btn btn-email">Email Us Now</a>
-    </header>
+    .hero-container {
+        width: 94%;
+        height: 500px;
+    }
 
-    <!-- Services Grid Grid -->
-    <section class="services" id="services">
-        <h2>Expert Services We Provide</h2>
-        <div class="grid">
-            
-            <!-- Service 1 -->
-            <div class="card">
-                <img src="inst.jpg" alt="Plumbing Installation">
-                <div class="card-content">
-                    <h3>Plumbing Installation</h3>
-                    <p>High-quality residential and commercial plumbing setups, pipeline tracking, repairs, and fixture installations built to last.</p>
-                </div>
-            </div>
+    .slide-content {
+        max-width: 75%;
+        padding: 30px;
+        margin-left: 5%;
+    }
 
-            <!-- Service 2 -->
-            <div class="card">
-                <img src="irr.jpg" alt="Irrigation Systems">
-                <div class="card-content">
-                    <h3>Irrigation Systems</h3>
-                    <p>Custom commercial and agricultural drip and sprinkler layout systems designed to optimize water usage and maximize crop yields.</p>
-                </div>
-            </div>
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
 
-            <!-- Service 3 -->
-            <div class="card">
-                <img src="water.jpg" alt="Water Supply Systems">
-                <div class="card-content">
-                    <h3>Water Supply Systems</h3>
-                    <p>Clean water distribution systems, pump installations, storage tank integration, and pressure management infrastructure.</p>
-                </div>
-            </div>
+    footer {
+        width: 94%;
+    }
+}
 
-        </div>
-    </section>
 
-    <!-- Business Contact Info Section -->
-    <section class="info-panel" id="contact">
-        <h2>Get in Touch With Us</h2>
-        <div class="info-details">
-            <div>📍 <strong>Location:</strong> Mengo, Stanet, Kampala, Uganda</div>
-            <div>📞 <strong>WhatsApp:</strong> +256707056887</div>
-            <div>✉️ <strong>Email:</strong> enochsuuna@gmail.com</div>
-        </div>
-        <a href="https://wa.me/256707056887" class="btn btn-whatsapp" target="_blank">Book Appointment Via WhatsApp</a>
-    </section>
+/* =========================================================
+   MOBILE PHONES
+   ========================================================= */
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 @prince water engineering services. All Rights Reserved. Located at Mengo Stanet.</p>
-    </footer>
+@media (max-width: 600px) {
 
-</body>
-</html>
+    /* ---------- GENERAL ---------- */
+
+    body {
+        font-size: 14px;
+    }
+
+    /* ---------- HEADER ---------- */
+
+    header {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 12px 15px;
+        gap: 12px;
+    }
+
+    .logo-container {
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .logo {
+        width: 42px;
+    }
+
+    .logo-text h1 {
+        font-size: 1.05rem;
+    }
+
+    .logo-text span {
+        font-size: 0.75rem;
+    }
+
+    /* ---------- NAVIGATION ---------- */
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav a {
+        display: block;
+        padding: 6px 7px;
+        font-size: 0.78rem;
+    }
+
+    nav a.active,
+    nav a:hover {
+        padding-bottom: 5px;
+    }
+
+    /* ---------- WHATSAPP BUTTON ---------- */
+
+    .whatsapp-btn {
+        width: 100%;
+        max-width: 240px;
+        justify-content: center;
+        padding: 10px 15px;
+        font-size: 0.82rem;
+    }
+
+    /* ---------- HERO SLIDER ---------- */
+
+    .hero-container {
+        width: calc(100% - 20px);
+        height: 560px;
+        margin: 10px auto;
+        border-radius: 14px;
+    }
+
+    .slide {
+        align-items: flex-end;
+        background-position: center center;
+    }
+
+    /* ---------- HERO TEXT ---------- */
+
+    .slide-content {
+        width: calc(100% - 24px);
+        max-width: none;
+        margin: 0 12px 45px 12px;
+        padding: 20px 18px;
+        border-radius: 14px;
+        backdrop-filter: blur(6px);
+    }
+
+    .slide-content h2 {
+        font-size: 1.45rem;
+        line-height: 1.2;
+        margin-bottom: 8px;
+    }
+
+    .slide-content h3 {
+        font-size: 0.95rem;
+        line-height: 1.3;
+        margin-bottom: 10px;
+    }
+
+    .slide-content p {
+        font-size: 0.82rem;
+        line-height: 1.5;
+        margin-bottom: 8px;
+    }
+
+    /* ---------- CTA BUTTON ---------- */
+
+    .cta-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 12px;
+        padding: 10px 15px;
+        font-size: 0.82rem;
+    }
+
+    /* ---------- SLIDER ARROWS ---------- */
+
+    .prev-btn,
+    .next-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 0.75rem;
+    }
+
+    .prev-btn {
+        left: 8px;
+    }
+
+    .next-btn {
+        right: 8px;
+    }
+
+    /* ---------- SLIDER DOTS ---------- */
+
+    .dots-container {
+        bottom: 12px;
+        gap: 6px;
+    }
+
+    .dot {
+        width: 9px;
+        height: 9px;
+    }
+
+    .dot.active {
+        width: 20px;
+    }
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
+
+    footer {
+        width: calc(100% - 20px);
+        margin: 20px auto 8px;
+        padding: 35px 20px 15px;
+        border-radius: 14px;
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding-bottom: 25px;
+    }
+
+    /* ---------- FOOTER LOGO ---------- */
+
+    .footer-about .logo-container {
+        justify-content: flex-start;
+    }
+
+    .footer-about .logo-text h1 {
+        font-size: 1.05rem;
+    }
+
+    /* ---------- FOOTER HEADINGS ---------- */
+
+    .footer-col h4 {
+        font-size: 0.9rem;
+        margin-bottom: 14px;
+    }
+
+    /* ---------- FOOTER TEXT ---------- */
+
+    .footer-about p {
+        font-size: 0.82rem;
+        line-height: 1.5;
+    }
+
+    .location-item,
+    .service-item,
+    .contact-item {
+        font-size: 0.8rem;
+        line-height: 1.45;
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+
+    /* Prevent long text from overflowing */
+    .location-item > div:last-child,
+    .contact-item > div:last-child,
+    .service-item {
+        min-width: 0;
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    /* ---------- FOOTER ICONS ---------- */
+
+    .icon-box {
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        font-size: 0.75rem;
+    }
+
+    /* ---------- QUICK LINKS ---------- */
+
+    .footer-col ul li {
+        margin-bottom: 8px;
+    }
+
+    .footer-col ul a {
+        font-size: 0.82rem;
+    }
+
+    /* ---------- SOCIAL ICONS ---------- */
+
+    .social-icons a {
+        width: 34px;
+        height: 34px;
+    }
+
+    /* ---------- COPYRIGHT ---------- */
+
+    .copyright {
+        padding-top: 15px;
+        font-size: 0.7rem;
+        line-height: 1.4;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .logo-text h1 {
+        font-size: 0.95rem;
+    }
+
+    .logo-text span {
+        font-size: 0.68rem;
+    }
+
+    nav ul {
+        gap: 4px;
+    }
+
+    nav a {
+        font-size: 0.72rem;
+        padding: 5px;
+    }
+
+    .hero-container {
+        height: 570px;
+    }
+
+    .slide-content {
+        padding: 17px 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .slide-content h2 {
+        font-size: 1.25rem;
+    }
+
+    .slide-content h3 {
+        font-size: 0.88rem;
+    }
+
+    .slide-content p {
+        font-size: 0.78rem;
+    }
+
+    .cta-btn {
+        font-size: 0.78rem;
+        padding: 9px 12px;
+    }
+
+    footer {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
